@@ -1,0 +1,6 @@
+{
+  "name": "LEGO Nightmare",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:20",
+  "forwardPorts": [5173],
+  "postCreateCommand": "ELECTRON_SKIP_BINARY_DOWNLOAD=1 npm install"
+}

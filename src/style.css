@@ -1,0 +1,31 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; background: #000; overflow: hidden; font-family: 'Segoe UI', Arial, sans-serif; color: #eee; user-select: none; }
+canvas { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+.hidden { display: none !important; }
+
+#crosshair { position: fixed; left: 50%; top: 50%; width: 6px; height: 6px; margin: -3px; border-radius: 50%; background: rgba(255,255,255,.7); }
+#prompt { position: fixed; left: 50%; top: 58%; transform: translateX(-50%); padding: 8px 16px; background: rgba(0,0,0,.65); border: 1px solid #a11; border-radius: 6px; font-size: 18px; }
+#toast { position: fixed; left: 50%; bottom: 18%; transform: translateX(-50%); padding: 10px 20px; background: rgba(0,0,0,.75); border-radius: 6px; font-size: 18px; text-align: center; }
+#objective { position: fixed; right: 24px; top: 20px; font-size: 14px; text-align: right; color: #ffd84a; text-shadow: 0 0 6px #000; }
+#objective::before { content: 'OBJECTIVE\A'; white-space: pre; color: #bbb; font-size: 11px; letter-spacing: 2px; }
+#battery { position: fixed; left: 24px; bottom: 24px; display: flex; align-items: center; gap: 8px; font-size: 22px; }
+#battery .bar { width: 110px; height: 14px; border: 2px solid #ddd; border-radius: 3px; padding: 1px; }
+#battery-fill { height: 100%; width: 100%; background: #ffd84a; transition: width .2s; }
+#battery-fill.low { background: #e22; }
+#inventory { position: fixed; right: 24px; bottom: 24px; display: flex; gap: 8px; }
+.slot { min-width: 64px; padding: 6px 10px; text-align: center; background: rgba(0,0,0,.6); border: 1px solid #777; border-radius: 6px; font-size: 12px; }
+.slot b { display: block; font-size: 24px; font-weight: normal; }
+
+.screen { position: fixed; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; background: radial-gradient(circle at 50% 40%, rgba(40,0,0,.85), rgba(0,0,0,.96)); }
+h1 { margin: 0; font: 900 64px/0.95 Impact, 'Arial Black', sans-serif; letter-spacing: 2px; }
+h1 span { color: #d11; text-shadow: 0 0 18px #800; font-size: 78px; }
+h2 { font: 900 44px Impact, 'Arial Black', sans-serif; color: #d11; margin: 0; }
+.tag { font-style: italic; font-size: 20px; margin: 0; } .tag em { color: #e33; }
+.story { max-width: 460px; color: #bbb; margin: 0; }
+.controls { color: #888; font-size: 13px; }
+button { padding: 12px 34px; font-size: 18px; font-weight: 700; color: #fff; background: #a00; border: 2px solid #f44; border-radius: 6px; cursor: pointer; }
+button:hover { background: #d11; }
+
+#hearts { position: fixed; left: 24px; top: 20px; font-size: 26px; }
+#flash { position: fixed; inset: 0; background: rgba(200,0,0,.75); pointer-events: none; }
+#keypad-input { font: 700 40px monospace; width: 200px; text-align: center; letter-spacing: 10px; background: #111; color: #6f9; border: 2px solid #6f9; padding: 8px; }

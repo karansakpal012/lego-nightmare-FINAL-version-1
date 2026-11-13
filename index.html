@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LEGO Nightmare</title>
+</head>
+<body>
+  <canvas id="game"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="crosshair"></div>
+    <div id="objective"></div>
+    <div id="prompt" class="hidden"></div>
+    <div id="toast" class="hidden"></div>
+    <div id="hearts"></div>
+    <div id="flash" class="hidden"></div>
+    <div id="battery"><span>🔦</span><div class="bar"><div id="battery-fill"></div></div></div>
+    <div id="inventory"></div>
+  </div>
+
+  <div id="screen-menu" class="screen">
+    <h1>LEGO<br /><span>NIGHTMARE</span></h1>
+    <p class="tag">Escape… or be trapped <em>forever.</em></p>
+    <p class="story">You wake up inside Factory No. 13. The doors are locked, and something is moving in the shadows.</p>
+    <button id="btn-start">Start Game</button>
+    <p class="controls">WASD move · Shift run · C crouch · hide in lockers · Mouse look · F flashlight · E interact · Esc pause</p>
+  </div>
+
+  <div id="screen-pause" class="screen hidden">
+    <h2>Paused</h2>
+    <button id="btn-resume">Resume</button>
+    <button id="btn-restart">Restart</button>
+  </div>
+
+  <div id="screen-end" class="screen hidden">
+    <h2>You escaped… for now.</h2>
+    <p class="story">Prototype complete. The Production Floor awaits in the next build.</p>
+    <button id="btn-again">Play Again</button>
+  </div>
+
+  <div id="screen-dead" class="screen hidden">
+    <h2>You died</h2>
+    <p class="story">The monster caught you in Factory No. 13.</p>
+    <button id="btn-retry">Try Again</button>
+  </div>
+
+  <div id="keypad" class="screen hidden">
+    <h2>Keypad</h2>
+    <input id="keypad-input" maxlength="4" inputmode="numeric" autocomplete="off" />
+    <div><button id="keypad-ok">Enter</button> <button id="keypad-cancel">Cancel</button></div>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
